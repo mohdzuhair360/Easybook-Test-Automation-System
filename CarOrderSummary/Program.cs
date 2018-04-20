@@ -22,6 +22,7 @@ namespace CarOrderSummary
             try
             {
                 Console.WriteLine("Update");
+                Console.WriteLine("Update2");
                 //Console.WriteLine("Enter URL : ");
                 string url = "https://test.easybook.com/en-my/payment/paymentresult?guid=CRc7f01c6c25274e93be&source=PaypalEC_MYR&status=completed";
                 //url = Console.ReadLine();
