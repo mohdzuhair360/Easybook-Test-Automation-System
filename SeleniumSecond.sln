@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeleniumSecond", "SeleniumSecond\SeleniumSecond.csproj", "{2178CDCB-6058-4581-ACF9-46EAC79BA326}"
 EndProject
@@ -52,6 +52,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualDateSandbox", "ManualDateSandbox\ManualDateSandbox.csproj", "{9935A7D8-DEC0-466A-9BD3-2567818E1663}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainClass1Sandbox", "MainClass1Sandbox\MainClass1Sandbox.csproj", "{C599669A-60A2-4559-A53B-4FFBC00B380E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBTestBuySystem", "EBTestBuySystem\EBTestBuySystem.csproj", "{D8CF4A6C-AE88-4EB2-B858-E870F20C8899}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,8 +161,15 @@ Global
 		{C599669A-60A2-4559-A53B-4FFBC00B380E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C599669A-60A2-4559-A53B-4FFBC00B380E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C599669A-60A2-4559-A53B-4FFBC00B380E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8CF4A6C-AE88-4EB2-B858-E870F20C8899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8CF4A6C-AE88-4EB2-B858-E870F20C8899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8CF4A6C-AE88-4EB2-B858-E870F20C8899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8CF4A6C-AE88-4EB2-B858-E870F20C8899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01AB9AB9-C82D-49BE-9E86-C07E1A388D05}
 	EndGlobalSection
 EndGlobal
