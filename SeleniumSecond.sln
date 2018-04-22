@@ -53,7 +53,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualDateSandbox", "Manual
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainClass1Sandbox", "MainClass1Sandbox\MainClass1Sandbox.csproj", "{C599669A-60A2-4559-A53B-4FFBC00B380E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBTestBuySystem", "EBTestBuySystem\EBTestBuySystem.csproj", "{D8CF4A6C-AE88-4EB2-B858-E870F20C8899}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidly", "Vidly\Vidly.csproj", "{26ECCCBB-37B5-4D65-9741-93B9621EFA64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,10 +161,10 @@ Global
 		{C599669A-60A2-4559-A53B-4FFBC00B380E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C599669A-60A2-4559-A53B-4FFBC00B380E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C599669A-60A2-4559-A53B-4FFBC00B380E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D8CF4A6C-AE88-4EB2-B858-E870F20C8899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D8CF4A6C-AE88-4EB2-B858-E870F20C8899}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D8CF4A6C-AE88-4EB2-B858-E870F20C8899}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D8CF4A6C-AE88-4EB2-B858-E870F20C8899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26ECCCBB-37B5-4D65-9741-93B9621EFA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26ECCCBB-37B5-4D65-9741-93B9621EFA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26ECCCBB-37B5-4D65-9741-93B9621EFA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26ECCCBB-37B5-4D65-9741-93B9621EFA64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
