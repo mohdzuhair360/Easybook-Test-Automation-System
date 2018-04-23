@@ -71,6 +71,10 @@
       <Project>{33f40e25-d904-4ba6-acd3-1fc2362e6af3}</Project>
       <Name>BusOrderSummary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\OpenIntendedServerSandbox\OpenIntendedServerSandbox.csproj">
+      <Project>{7f039ae4-bc83-4c7d-ae8b-f0cd7f202a5b}</Project>
+      <Name>OpenIntendedServerSandbox</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Selenium.Chrome.WebDriver.2.37\build\Selenium.Chrome.WebDriver.targets" Condition="Exists('..\packages\Selenium.Chrome.WebDriver.2.37\build\Selenium.Chrome.WebDriver.targets')" />

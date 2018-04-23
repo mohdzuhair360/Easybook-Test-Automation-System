@@ -13,3 +13,5 @@ C:\Users\Easybook KL\documents\visual studio 2015\Projects\SeleniumSecond\TestBu
 C:\Users\Easybook KL\documents\visual studio 2015\Projects\SeleniumSecond\TestBuyBusTest\obj\Debug\TestBuyBusTest.csprojResolveAssemblyReference.cache
 C:\Users\Easybook KL\documents\visual studio 2015\Projects\SeleniumSecond\TestBuyBusTest\bin\Debug\BusOrderSummary.exe
 C:\Users\Easybook KL\documents\visual studio 2015\Projects\SeleniumSecond\TestBuyBusTest\bin\Debug\BusOrderSummary.pdb
+C:\Users\Easybook KL\documents\visual studio 2015\Projects\SeleniumSecond\TestBuyBusTest\bin\Debug\OpenIntendedServerSandbox.exe
+C:\Users\Easybook KL\documents\visual studio 2015\Projects\SeleniumSecond\TestBuyBusTest\bin\Debug\OpenIntendedServerSandbox.pdb

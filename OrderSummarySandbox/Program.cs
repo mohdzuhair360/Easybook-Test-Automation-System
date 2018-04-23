@@ -489,7 +489,7 @@ namespace OrderSummarySandbox
     {
         static void Main(string[] args)
         {
-            OrderSummary test1 = new OrderSummary();
+         //   OrderSummary test1 = new OrderSummary();
             /*test1.LaunchBrowser();
             test1.OrderNo();
             test1.ProductName();
@@ -502,7 +502,7 @@ namespace OrderSummarySandbox
             test1.Company();
             test1.PassengerName();
             test1.Server(); 
-            test1.Platform();*/
+            test1.Platform();
             test1.LaunchBrowser();
             string productType = test1.ProductName();
             string orderNo = test1.OrderNo();
@@ -514,7 +514,7 @@ namespace OrderSummarySandbox
             string Company = test1.Company();
             test1.ExcelWrite(productType, orderNo, CartID, carDetail, PurchaseDate, rentDuration, passengerName, Company);
             test1.CloseBrowser();
-            
+            */
 
         }
     }

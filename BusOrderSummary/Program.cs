@@ -23,7 +23,12 @@ namespace BusOrderSummary
             {
                 //Console.WriteLine("Enter URL : ");
                 string url =
-                    "https://test.easybook.com/en-my/payment/paymentresult?guid=BUS5fe4f96ac5a54530b&source=PaypalEC_MYR&status=completed";
+                    "https://test.easybook.com/en-my/payment/paymentresult?guid=BUS11ca856bb478406e8&source=PaypalEC_MYR&status=completed";
+                string url1 =
+                    "https://test.easybook.com/en-sg/payment/paymentresult?guid=BUS36573c11734e4113a&source=PaypalEC_SGD&status=completed";
+                string url2 =
+                    "https://www.easybook.com/en-sg/payment/paymentresult?guid=BUS7755b737f6034f19a&source=PaypalEC_SGD&status=completed";
+                
                 //url = Console.ReadLine();
                 //driver.Navigate().GoToUrl(url);
                 driver.Navigate().GoToUrl(url);
@@ -375,7 +380,7 @@ namespace BusOrderSummary
         static void Main(string[] args)
         {
             OrderSummary test1 = new OrderSummary();
-            OrderSummary test2 = new OrderSummary();
+           
            
             test1.LaunchBrowser();
 
@@ -398,7 +403,7 @@ namespace BusOrderSummary
 
 
             //test1.CloseBrowser();
-
+            
         }
     }
 }

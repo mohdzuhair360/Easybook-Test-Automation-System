@@ -393,11 +393,11 @@ namespace GeolocationIntellisenceTest
         {
             GeolocationIntellisence test1 = new GeolocationIntellisence();
             test1.LaunchBrowser();
-            //test1.CheckServerName();
+            test1.CheckServerName();
             //test1.CheckServerConnection();
-            //test1.CheckServerIPName();
-            //test1.GeolocationTest();
-            //test1.IntellisenceTest();
+            test1.CheckServerIPName();
+            test1.GeolocationTest();
+            test1.IntellisenceTest();
             //test1.CloseBrowser();
         }
     }

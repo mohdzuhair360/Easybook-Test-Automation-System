@@ -106,7 +106,8 @@ namespace TestBuyBusLiveSGD
         {
             try
             {
-                driver.FindElement(By.Id("TripType")).Click();
+                //driver.FindElement(By.Id("TripType")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("TripType")))).Click();
                 //Console.WriteLine("Select one way");
                 //Thread.Sleep(1000);
             }
@@ -124,13 +125,16 @@ namespace TestBuyBusLiveSGD
         {
             try
             {
-
                 driver.FindElement(By.Id("dpDepartureDate_Bus")).Click();
+                driver.FindElement(By.Id("dpDepartureDate_Bus")).Clear();
+                driver.FindElement(By.Id("dpDepartureDate_Bus")).SendKeys("2020 - 3 - 8");
+
+               /* driver.FindElement(By.Id("dpDepartureDate_Bus")).Click();
                 driver.FindElement(By.XPath("//tr[2]/th[2]")).Click();
                 driver.FindElement(By.XPath("//div[2]/table/thead/tr[2]/th[2]")).Click();
                 driver.FindElement(By.XPath("//div[3]/table/tbody/tr/td/span[12]")).Click();
                 driver.FindElement(By.XPath("//td/span[3]")).Click();
-                driver.FindElement(By.XPath("//div[12]/div/table/tbody/tr[3]/td")).Click();
+                driver.FindElement(By.XPath("//div[12]/div/table/tbody/tr[3]/td")).Click();*/
                 //Console.WriteLine("Date Selected");
             }
             catch (NoSuchElementException)
@@ -169,9 +173,10 @@ namespace TestBuyBusLiveSGD
                 //*[@id="MY-int-21237652-616423e5-43c2-4d63-aab1-d3f554b08abb"]/td[9]/div[1]/a
                 Thread.Sleep(3000);
                 //driver.FindElement(By.LinkText("Select Seats")).Click();
-                
+
                 //driver.FindElement(By.LinkText("(Select Seats)[3]")).Click();
-                driver.FindElement(By.XPath("//*[@id=\"MY-int-21237652-616423e5-43c2-4d63-aab1-d3f554b08abb\"]/td[9]/div[1]/a")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.XPath("//*[@id=\"MY-int-21237652-616423e5-43c2-4d63-aab1-d3f554b08abb\"]/td[9]/div[1]/a")))).Click();
+                //driver.FindElement(By.XPath("//*[@id=\"MY-int-21237652-616423e5-43c2-4d63-aab1-d3f554b08abb\"]/td[9]/div[1]/a")).Click();
                 //Console.WriteLine("Select trip");
                 /* bus test2 = new bus();
                 // bool trip = test2.IsElementPresent("//*[@id=\"btnProceedToPassengerDetail\"]");
@@ -290,8 +295,8 @@ namespace TestBuyBusLiveSGD
         {
             try
             {
-
-                driver.FindElement(By.Id("paymentPayPalEC_SGD")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("paymentPayPalEC_SGD")))).Click();
+                //driver.FindElement(By.Id("paymentPayPalEC_SGD")).Click();
                 // Console.WriteLine("Select Paypal");
                 //Thread.Sleep(2000);
             }
@@ -308,8 +313,8 @@ namespace TestBuyBusLiveSGD
         {
             try
             {
-
-                driver.FindElement(By.Id("CaptchaCode")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("CaptchaCode")))).Click();
+                //driver.FindElement(By.Id("CaptchaCode")).Click();
                 //driver.FindElement(By.XPath("//*[@id=\"CaptchaCode\"]")).Click();
 
                 //Console.WriteLine("Captcha found");
@@ -360,9 +365,14 @@ namespace TestBuyBusLiveSGD
         {
             try
             {
-                Thread.Sleep(5000);
-                driver.FindElement(By.LinkText("Log In")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(60)).Until(ExpectedConditions.ElementExists(By.LinkText("Log In"))).Click();
+                /*new WebDriverWait(driver, TimeSpan.FromSeconds(25)).Until(ExpectedConditions.ElementExists(By.Id("email"))).SendKeys("ebvanhieptest1@gmail.com");
+                driver.FindElement(By.XPath("//*[@id=\"btnNext\"]")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(25)).Until(ExpectedConditions.ElementExists(By.Id("password"))).SendKeys("Ebtest@1133");
+                driver.FindElement(By.CssSelector("#btnLogin")).Click();*/
                 Thread.Sleep(6000);
+                //driver.FindElement(By.LinkText("Log In")).Click();
+                //Thread.Sleep(6000);
                 //Console.WriteLine("Login clicked");
                 //Thread.Sleep(8000);
 
@@ -394,7 +404,7 @@ namespace TestBuyBusLiveSGD
 
 
                 //*[@id="password"]
-                Thread.Sleep(4000);
+                Thread.Sleep(5000);
                 var password = driver.FindElement(By.Id("password"));
                 password.SendKeys("Ebtest@1133");
 
@@ -403,7 +413,7 @@ namespace TestBuyBusLiveSGD
                 //*[@id="btnLogin"]
                 //Console.WriteLine("Logged in");
 
-                Thread.Sleep(8000);
+                //Thread.Sleep(8000);
 
             }
             catch (NoSuchElementException)
@@ -418,13 +428,16 @@ namespace TestBuyBusLiveSGD
         {
             try
             {
+                new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(ExpectedConditions.ElementExists(By.Id("confirmButtonTop"))).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(25)).Until(ExpectedConditions.ElementExists(By.Id("pay_now_button"))).Click();
+
                 //driver.FindElement(By.XPath("//div[@id='button']/button")).Click();
                 //Console.WriteLine("Pay now");
                 //Thread.Sleep(1000);
-                driver.FindElement(By.Id("confirmButtonTop")).Click();
+                //driver.FindElement(By.Id("confirmButtonTop")).Click();
                 //Console.WriteLine("Pay Now 2");
-                Thread.Sleep(5000);
-                driver.FindElement(By.Id("pay_now_button")).Click();
+                //Thread.Sleep(5000);
+                //driver.FindElement(By.Id("pay_now_button")).Click();
                 //Console.WriteLine("Pay Now 3");
                 Thread.Sleep(10000);
 
