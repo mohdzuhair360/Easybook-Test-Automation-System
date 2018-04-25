@@ -157,7 +157,7 @@ namespace TestBuyBusTestSGD
             catch (NoSuchElementException)
             {
                 Console.WriteLine("Submit button not found");
-                driver.Close();
+                //driver.Close();
 
             }
 
@@ -280,7 +280,7 @@ namespace TestBuyBusTestSGD
             catch (NoSuchElementException)
             {
                 Console.WriteLine("Insurance not found");
-                driver.Close();
+               // driver.Close();
 
             }
 
@@ -299,7 +299,7 @@ namespace TestBuyBusTestSGD
             catch (NoSuchElementException)
             {
                 Console.WriteLine("Paypal element not found");
-                driver.Close();
+               // driver.Close();
 
             }
 
@@ -319,7 +319,7 @@ namespace TestBuyBusTestSGD
             catch (NoSuchElementException)
             {
                 Console.WriteLine("Captcha not found");
-                driver.Close();
+               // driver.Close();
 
             }
 
@@ -351,7 +351,7 @@ namespace TestBuyBusTestSGD
             catch (NoSuchElementException)
             {
                 Console.WriteLine("Pay now proceed not found");
-                driver.Close();
+               // driver.Close();
 
             }
 
@@ -366,7 +366,7 @@ namespace TestBuyBusTestSGD
                 //driver.FindElement(By.LinkText("Log In")).Click();
                 //Thread.Sleep(6000);
                 //Console.WriteLine("Login clicked");
-                Thread.Sleep(8000);
+                Thread.Sleep(4000);
 
                 /* driver.SwitchTo().Frame(driver.FindElement(By.TagName("iframe")));
                  var emailAddressLogin = driver.FindElement(By.Id("email"));
@@ -398,7 +398,7 @@ namespace TestBuyBusTestSGD
 
 
                 //*[@id="password"]
-                Thread.Sleep(8000);
+                Thread.Sleep(2000);
                 var password = driver.FindElement(By.Id("password"));
                 password.SendKeys("Ebtest@1133");
 
@@ -407,7 +407,7 @@ namespace TestBuyBusTestSGD
                 //*[@id="btnLogin"]
                 //Console.WriteLine("Logged in");
 
-                Thread.Sleep(6000);
+                Thread.Sleep(8000);
 
             }
             catch (NoSuchElementException)
@@ -431,7 +431,7 @@ namespace TestBuyBusTestSGD
                 //driver.FindElement(By.XPath("//*[@id=\"pay_now_button\"]")).Click();
 
                 //Console.WriteLine("Pay Now 3");
-                Thread.Sleep(12000);
+                ///Thread.Sleep(8000);
 
 
             }

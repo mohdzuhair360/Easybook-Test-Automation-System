@@ -81,7 +81,8 @@ namespace TestBuyFerryMYR
         {
             try
             {
-                driver.FindElement(By.Id("TripType")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("radioOneWay")))).Click();
+                //driver.FindElement(By.Id("TripType")).Click();
                 //Console.WriteLine("Select one way");
                 //Thread.Sleep(1000);
             }
@@ -101,11 +102,13 @@ namespace TestBuyFerryMYR
             {
 
                 driver.FindElement(By.Id("dpDepartureDate_Ferry")).Click();
-                driver.FindElement(By.XPath("//tr[2]/th[2]")).Click();
-                driver.FindElement(By.XPath("//div[2]/table/thead/tr[2]/th[2]")).Click();
-                driver.FindElement(By.XPath("//div[3]/table/tbody/tr/td/span[11]")).Click();
-                driver.FindElement(By.XPath("//td/span[3]")).Click();
-                driver.FindElement(By.XPath("//div[10]/div/table/tbody/tr[4]/td")).Click();
+                driver.FindElement(By.Id("dpDepartureDate_Ferry")).Clear();
+                driver.FindElement(By.Id("dpDepartureDate_Ferry")).SendKeys("2019-03-10");
+                //driver.FindElement(By.XPath("//tr[2]/th[2]")).Click();
+                //driver.FindElement(By.XPath("//div[2]/table/thead/tr[2]/th[2]")).Click();
+                //driver.FindElement(By.XPath("//div[3]/table/tbody/tr/td/span[11]")).Click();
+                //driver.FindElement(By.XPath("//td/span[3]")).Click();
+                //driver.FindElement(By.XPath("//div[10]/div/table/tbody/tr[4]/td")).Click();
                 //Console.WriteLine("Date Selected");
             }
             catch (NoSuchElementException)
@@ -140,9 +143,9 @@ namespace TestBuyFerryMYR
         {
             try
             {
-                Thread.Sleep(3000);
-                driver.FindElement(By.XPath("//table[@id='dep-trip-tbl']/tbody/tr[12]/td[8]/span")).Click();
-                driver.FindElement(By.XPath("(//a[contains(text(),'Select Seats')])[12]")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.XPath("//*[@id=\"MY-int-316023-8c7fc8eb-f65e-450f-8d03-a7678e87e214\"]/div[1]/div[5]/div/a")))).Click();
+                //driver.FindElement(By.XPath("//table[@id='dep-trip-tbl']/tbody/tr[12]/td[8]/span")).Click();
+                //driver.FindElement(By.XPath("(//a[contains(text(),'Select Seats')])[12]")).Click();
                 //driver.FindElement(By.LinkText("Select Seats")).Click();
                 //Console.WriteLine("Select trip");
                 Thread.Sleep(1000);
@@ -159,18 +162,19 @@ namespace TestBuyFerryMYR
 
         public void SelectSeat()
         {
-            /*driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select")).Click();
-            new SelectElement(driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select"))).SelectByText("1 Seats");
-            //driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select")).Click();
-            driver.FindElement(By.Id("MY-int-219566-cbdbc7b9-413b-4af3-b0af-3b303112d970")).Click();
-            //driver.FindElement(By.Id("//*[@id=\"MY - int - 219566 - cbdbc7b9 - 413b - 4af3 - b0af - 3b303112d970\"]")).Click();
-            //driver.FindElement(By.LinkText("Continue")).Click(); 
-            //Console.WriteLine("Empty seat found");*/
+            
+            driver.FindElement(By.XPath("(//div[@id='ferry-seat-chart']/div/div[2]/div/div/select)[17]")).Click();
+            new SelectElement(driver.FindElement(By.XPath("(//div[@id='ferry-seat-chart']/div/div[2]/div/div/select)[17]"))).SelectByText("1 Seats");
+            driver.FindElement(By.XPath("(//div[@id='ferry-seat-chart']/div/div[2]/div/div/select)[17]")).Click();
+            //driver.FindElement(By.XPath("//button[@id='MY-int-316023-8c7fc8eb-f65e-450f-8d03-a7678e87e214']")).Click();
 
-            driver.FindElement(By.XPath("(//div[@id='ferry-seat-chart']/div/div[2]/div/div/select)[12]")).Click();
-            new SelectElement(driver.FindElement(By.XPath("(//div[@id='ferry-seat-chart']/div/div[2]/div/div/select)[12]"))).SelectByText("1 Seats");
-            driver.FindElement(By.XPath("(//div[@id='ferry-seat-chart']/div/div[2]/div/div/select)[12]")).Click();
-            driver.FindElement(By.Id("MY-int-276146-ac013c13-a9d3-4a8f-b7f3-24409e2293e8")).Click();
+            //new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select")))).Click();
+            //new SelectElement(driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select"))).SelectByText("1 Seats");
+            //driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select")).Click();
+            driver.FindElement(By.XPath("//button[@id='MY-int-316023-8c7fc8eb-f65e-450f-8d03-a7678e87e214']")).Click();
+            //new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists(By.Id("//*[@id=\"MY-int-316023-8c7fc8eb-f65e-450f-8d03-a7678e87e214\"]"))).Click();
+
+
         }
 
 
@@ -178,8 +182,8 @@ namespace TestBuyFerryMYR
         {
             try
             {
-
-                driver.FindElement(By.Id("paymentPayPalEC_MYR")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("paymentPayPalEC_MYR")))).Click();
+                //driver.FindElement(By.Id("paymentPayPalEC_MYR")).Click();
                 // Console.WriteLine("Select Paypal");
                 //Thread.Sleep(2000);
             }
@@ -196,8 +200,8 @@ namespace TestBuyFerryMYR
         {
             try
             {
-
-                driver.FindElement(By.Id("CaptchaCode")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("CaptchaCode")))).Click();
+                //driver.FindElement(By.Id("CaptchaCode")).Click();
                 //driver.FindElement(By.XPath("//*[@id=\"CaptchaCode\"]")).Click();
 
                 //Console.WriteLine("Captcha found");
@@ -248,8 +252,10 @@ namespace TestBuyFerryMYR
         {
             try
             {
-                Thread.Sleep(8000);
-                driver.FindElement(By.LinkText("Log In")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(60)).Until(ExpectedConditions.ElementExists(By.LinkText("Log In"))).Click();
+
+                //Thread.Sleep(8000);
+                //driver.FindElement(By.LinkText("Log In")).Click();
                 Thread.Sleep(5000);
                 //Console.WriteLine("Login clicked");
                 //Thread.Sleep(8000);
@@ -273,7 +279,7 @@ namespace TestBuyFerryMYR
                 //*[@id="btnLogin"]
                 //Console.WriteLine("Logged in");
 
-                Thread.Sleep(6000);
+                Thread.Sleep(8000);
 
             }
             catch (NoSuchElementException)
@@ -289,14 +295,16 @@ namespace TestBuyFerryMYR
             try
             {
                 driver.FindElement(By.XPath("//div[@id='button']/button")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(ExpectedConditions.ElementExists(By.Id("confirmButtonTop"))).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(25)).Until(ExpectedConditions.ElementExists(By.Id("pay_now_button"))).Click();
                 //Console.WriteLine("Pay now");
-                Thread.Sleep(1000);
+                /*Thread.Sleep(1000);
                 driver.FindElement(By.Id("confirmButtonTop")).Click();
                 //Console.WriteLine("Pay Now 2");
                 Thread.Sleep(5000);
                 driver.FindElement(By.Id("pay_now_button")).Click();
                 //Console.WriteLine("Pay Now 3");
-                Thread.Sleep(10000);
+                Thread.Sleep(10000);*/
 
             }
             catch (NoSuchElementException)

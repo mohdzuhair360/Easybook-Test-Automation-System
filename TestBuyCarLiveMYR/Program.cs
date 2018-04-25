@@ -65,8 +65,8 @@ namespace TestBuyCarLiveMYR
             try
             {               
                 string urlKualaLumpur =
-                   "https://www.easybook.com/en-my/car/booking/kualarlumpurarea";
-
+                   "https://www.easybook.com/en-my/car/booking/kualalumpurarea";
+               
                 driver.Navigate().GoToUrl(urlKualaLumpur);
                 Console.WriteLine("Test Site - Car Test Buy");
 
@@ -84,15 +84,22 @@ namespace TestBuyCarLiveMYR
             try
             {
 
+
                 driver.FindElement(By.Id("ddPickUpDateCar")).Click();
-                driver.FindElement(By.XPath("//tr[2]/th[2]")).Click();
-                driver.FindElement(By.XPath("//div[2]/table/thead/tr[2]/th[2]")).Click();
-                driver.FindElement(By.XPath("//div[3]/table/thead/tr[2]/th[3]")).Click();
-                driver.FindElement(By.XPath("//div[3]/table/thead/tr[2]/th[3]")).Click();
-                driver.FindElement(By.XPath("//div[3]/table/thead/tr[2]/th[3]")).Click();
-                driver.FindElement(By.XPath("//div[3]/table/tbody/tr/td/span[8]")).Click();
-                driver.FindElement(By.XPath("//td/span[3]")).Click();
-                driver.FindElement(By.XPath("//div[8]/div/table/tbody/tr[2]/td[5]")).Click();
+                driver.FindElement(By.Id("ddPickUpDateCar")).Clear();
+                driver.FindElement(By.Id("ddPickUpDateCar")).SendKeys("2046-03-08");
+
+                driver.FindElement(By.Id("ddlPickUpTimeCar")).Click();
+                driver.FindElement(By.XPath("//*[@id=\"ddlPickUpTimeCar\"]/option[1]")).Click();
+                //*[@id="ddlPickUpTimeCar"]/option[1]
+                //driver.FindElement(By.Id("ddlPickUpTimeCar")).SendKeys("2019 - 3 - 8");
+
+                driver.FindElement(By.Id("ddReturnDateCar")).Click();
+                driver.FindElement(By.Id("ddReturnDateCar")).Clear();
+                driver.FindElement(By.Id("ddReturnDateCar")).SendKeys("2046-03-08");
+
+                driver.FindElement(By.Id("ddlReturnTimeCar")).Click();
+                driver.FindElement(By.XPath("//*[@id=\"ddlReturnTimeCar\"]/option[3]")).Click();
                 //driver.FindElement(By.Id("ddReturnDateCar")).Click();
                 //driver.FindElement(By.XPath("//div[8]/div/table/tbody/tr[2]/td[6]")).Click();
                 //Thread.Sleep(2000);
@@ -133,7 +140,8 @@ namespace TestBuyCarLiveMYR
             try
             {
                 //Thread.Sleep(3000);
-                driver.FindElement(By.XPath("(//button[@name='submit'])[2]")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.XPath("(//button[@name='submit'])[2]")))).Click();
+                //driver.FindElement(By.XPath("(//button[@name='submit'])[2]")).Click();
                 //Console.WriteLine("Select trip");
                 //Thread.Sleep(1000);
             }
@@ -167,8 +175,8 @@ namespace TestBuyCarLiveMYR
         {
             try
             {
-
-                driver.FindElement(By.Id("paymentPayPalEC_MYR")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("paymentPayPalEC_MYR")))).Click();
+                //driver.FindElement(By.Id("paymentPayPalEC_MYR")).Click();
                 // Console.WriteLine("Select Paypal");
                 Thread.Sleep(2000);
             }
@@ -185,8 +193,8 @@ namespace TestBuyCarLiveMYR
         {
             try
             {
-
-                driver.FindElement(By.Id("CaptchaCode")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("CaptchaCode")))).Click();
+                //driver.FindElement(By.Id("CaptchaCode")).Click();
                 //driver.FindElement(By.XPath("//*[@id=\"CaptchaCode\"]")).Click();
 
                 //Console.WriteLine("Captcha found");
@@ -195,7 +203,7 @@ namespace TestBuyCarLiveMYR
             catch (NoSuchElementException)
             {
                 Console.WriteLine("Captcha not found");
-                driver.Close();
+                //driver.Close();
 
             }
 
@@ -228,7 +236,7 @@ namespace TestBuyCarLiveMYR
             catch (NoSuchElementException)
             {
                 Console.WriteLine("Pay now proceed not found");
-                driver.Close();
+                //driver.Close();
 
             }
 
@@ -260,7 +268,7 @@ namespace TestBuyCarLiveMYR
                 new WebDriverWait(driver, TimeSpan.FromSeconds(60)).Until(ExpectedConditions.ElementExists(By.LinkText("Log In"))).Click();
                 //Thread.Sleep(15000);
                 //driver.FindElement(By.LinkText("Log In")).Click();
-                Thread.Sleep(10000);
+                Thread.Sleep(7000);
 
                 //Thread.Sleep(6000);
                 //driver.FindElement(By.LinkText("Log In")).Click();
@@ -287,7 +295,7 @@ namespace TestBuyCarLiveMYR
                 //*[@id="btnLogin"]
                 //Console.WriteLine("Logged in");
 
-                //Thread.Sleep(6000);
+                Thread.Sleep(8000);
 
             }
             catch (NoSuchElementException)

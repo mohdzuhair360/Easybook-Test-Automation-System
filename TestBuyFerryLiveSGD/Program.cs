@@ -127,12 +127,18 @@ namespace TestBuyFerryLiveSGD
         {
             try
             {
+
+                driver.FindElement(By.Id("dpDepartureDate_Ferry")).Click();
+                driver.FindElement(By.Id("dpDepartureDate_Ferry")).Clear();
+                driver.FindElement(By.Id("dpDepartureDate_Ferry")).SendKeys("2020-03-03");
+
+                /*
                 driver.FindElement(By.Id("dpDepartureDate_Ferry")).Click();
                 driver.FindElement(By.XPath("//tr[2]/th[2]")).Click();
                 driver.FindElement(By.XPath("//div[2]/table/thead/tr[2]/th[2]")).Click();
                 driver.FindElement(By.XPath("//div[3]/table/tbody/tr/td/span[12]")).Click();
                 driver.FindElement(By.XPath("//td/span[3]")).Click();
-                driver.FindElement(By.XPath("//div[10]/div/table/tbody/tr[2]/td")).Click();
+                driver.FindElement(By.XPath("//div[10]/div/table/tbody/tr[2]/td")).Click();*/
 
             }
             catch (NoSuchElementException)
@@ -168,8 +174,10 @@ namespace TestBuyFerryLiveSGD
         {
             try
             {
-                Thread.Sleep(3000);
-                driver.FindElement(By.LinkText("Select Seats")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.LinkText("Select")))).Click();
+                //Console.WriteLine("Select trip");
+                //Thread.Sleep(3000);
+                //driver.FindElement(By.LinkText("Select Seats")).Click();
                 //Console.WriteLine("Select trip");
                 Thread.Sleep(1000);
             }
@@ -185,12 +193,20 @@ namespace TestBuyFerryLiveSGD
 
         public void SelectSeat()
         {
-            driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select")).Click();
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.XPath("//*[@id=\"ferry-seat-chart\"]/div/div[2]/div/div/select")))).Click();
+            //*[@id="ferry-seat-chart"]/div/div[2]/div/div/select
+            //*[@id="ferry-seat-chart"]/div/div[2]/div/div/select
             new SelectElement(driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select"))).SelectByText("1 Seats");
-            //driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select")).Click();
-            driver.FindElement(By.Id("MY-int-219566-cbdbc7b9-413b-4af3-b0af-3b303112d970")).Click();
-            //driver.FindElement(By.Id("//*[@id=\"MY - int - 219566 - cbdbc7b9 - 413b - 4af3 - b0af - 3b303112d970\"]")).Click();
-            //driver.FindElement(By.LinkText("Continue")).Click(); 
+
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.XPath("//*[@id=\"ferry-seat-chart\"]/div/div[2]/div/div/select")))).Click();
+
+            new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.XPath("//*[@id=\"MY-int-219568-9ac8d73c-07cd-4f47-bedb-245f1510c2c5\"]")))).Click();
+
+            /*driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select")).Click();
+            new SelectElement(driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select"))).SelectByText("1 Seats");
+            driver.FindElement(By.XPath("//div[@id='ferry-seat-chart']/div/div[2]/div/div/select")).Click();
+            driver.FindElement(By.Id("MY-int-219568-9ac8d73c-07cd-4f47-bedb-245f1510c2c5")).Click();*/
+           
             //Console.WriteLine("Empty seat found");
         }
 
@@ -199,8 +215,9 @@ namespace TestBuyFerryLiveSGD
         {
             try
             {
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("paymentPayPalEC_SGD")))).Click();
 
-                driver.FindElement(By.Id("paymentPayPalEC_SGD")).Click();
+                //driver.FindElement(By.Id("paymentPayPalEC_SGD")).Click();
                 // Console.WriteLine("Select Paypal");
                 //Thread.Sleep(2000);
             }
@@ -217,8 +234,8 @@ namespace TestBuyFerryLiveSGD
         {
             try
             {
-
-                driver.FindElement(By.Id("CaptchaCode")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("CaptchaCode")))).Click();
+               // driver.FindElement(By.Id("CaptchaCode")).Click();
                 //driver.FindElement(By.XPath("//*[@id=\"CaptchaCode\"]")).Click();
 
                 //Console.WriteLine("Captcha found");
@@ -272,7 +289,7 @@ namespace TestBuyFerryLiveSGD
                 new WebDriverWait(driver, TimeSpan.FromSeconds(60)).Until(ExpectedConditions.ElementExists(By.LinkText("Log In"))).Click();
                 //Thread.Sleep(15000);
                 //driver.FindElement(By.LinkText("Log In")).Click();
-                Thread.Sleep(10000);
+                Thread.Sleep(5000);
                 //Thread.Sleep(8000);
                 //driver.FindElement(By.LinkText("Log In")).Click();
                 //Thread.Sleep(5000);
@@ -298,7 +315,7 @@ namespace TestBuyFerryLiveSGD
                 //*[@id="btnLogin"]
                 //Console.WriteLine("Logged in");
 
-                //Thread.Sleep(6000);
+                
 
             }
             catch (NoSuchElementException)
@@ -313,11 +330,21 @@ namespace TestBuyFerryLiveSGD
         {
             try
             {
+                Thread.Sleep(8000);
                 new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(ExpectedConditions.ElementExists(By.Id("confirmButtonTop"))).Click();
 
-                new WebDriverWait(driver, TimeSpan.FromSeconds(25)).Until(ExpectedConditions.ElementExists(By.Id("pay_now_button"))).Click();
-                Thread.Sleep(15000);
+                //new WebDriverWait(driver, TimeSpan.FromSeconds(25)).Until(ExpectedConditions.ElementExists(By.Id("pay_now_button"))).Click();
+                // Thread.Sleep(15000);
+                //*[@id="confirmButtonTop"]
+                //driver.FindElement(By.Id("confirmButtonTop")).Click();
+                Thread.Sleep(5000);
+                //driver.FindElement(By.Id("pay_now_button")).Click();
+
+               // new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(ExpectedConditions.ElementExists(By.Id("confirmButtonTop"))).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(ExpectedConditions.ElementExists(By.Id("pay_now_button"))).Click();
                 //driver.FindElement(By.XPath("//*[@id=\"confirmButtonTop\"]")).Click();
+                //Thread.Sleep(5000);
+                // new WebDriverWait(driver, TimeSpan.FromSeconds(25)).Until(ExpectedConditions.ElementExists(By.Id("pay_now_button"))).Click();
                 //Console.WriteLine("Pay now");
                 //Thread.Sleep(5000);
                 //driver.FindElement(By.XPath("//*[@id=\"pay_now_button\"]")).Click();

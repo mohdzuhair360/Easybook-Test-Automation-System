@@ -84,8 +84,23 @@ namespace TestBuyCar
         {
             try
             {
-
                 driver.FindElement(By.Id("ddPickUpDateCar")).Click();
+                driver.FindElement(By.Id("ddPickUpDateCar")).Clear();
+                driver.FindElement(By.Id("ddPickUpDateCar")).SendKeys("2019-03-08");
+
+                driver.FindElement(By.Id("ddlPickUpTimeCar")).Click();
+                driver.FindElement(By.XPath("//*[@id=\"ddlPickUpTimeCar\"]/option[1]")).Click();
+                //*[@id="ddlPickUpTimeCar"]/option[1]
+                //driver.FindElement(By.Id("ddlPickUpTimeCar")).SendKeys("2019 - 3 - 8");
+
+                driver.FindElement(By.Id("ddReturnDateCar")).Click();
+                driver.FindElement(By.Id("ddReturnDateCar")).Clear();
+                driver.FindElement(By.Id("ddReturnDateCar")).SendKeys("2019-03-08");
+
+                driver.FindElement(By.Id("ddlReturnTimeCar")).Click();
+                driver.FindElement(By.XPath("//*[@id=\"ddlReturnTimeCar\"]/option[3]")).Click();
+
+                /*driver.FindElement(By.Id("ddPickUpDateCar")).Click();
                 driver.FindElement(By.XPath("//tr[2]/th[2]")).Click();
                 driver.FindElement(By.XPath("//div[2]/table/thead/tr[2]/th[2]")).Click();
                 driver.FindElement(By.XPath("//div[3]/table/tbody/tr/td/span[11]")).Click();
@@ -93,7 +108,7 @@ namespace TestBuyCar
                 driver.FindElement(By.XPath("//div[8]/div/table/tbody/tr[2]/td[6]")).Click();
                 //Thread.Sleep(2000);
                 driver.FindElement(By.Id("ddReturnDateCar")).Click();
-                driver.FindElement(By.XPath("//div[8]/div/table/tbody/tr[2]/td[7]")).Click();
+                driver.FindElement(By.XPath("//div[8]/div/table/tbody/tr[2]/td[7]")).Click();*/
                 //Thread.Sleep(2000);
 
             }
@@ -129,7 +144,9 @@ namespace TestBuyCar
             try
             {
                 //Thread.Sleep(3000);
-                driver.FindElement(By.XPath("(//button[@name='submit'])[2]")).Click();
+                //*[@id="carSearchResultsTable"]/tbody/tr[4]/td[8]/div/button
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.XPath(" //*[@id=\"carSearchResultsTable\"]/tbody/tr[4]/td[8]/div/button")))).Click();
+                //driver.FindElement(By.XPath(" //*[@id=\"carSearchResultsTable\"]/tbody/tr[4]/td[8]/div/button")).Click();
                 //Console.WriteLine("Select trip");
                 //Thread.Sleep(1000);
             }
@@ -164,7 +181,8 @@ namespace TestBuyCar
             try
             {
 
-                driver.FindElement(By.Id("paymentPayPalEC_MYR")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("paymentPayPalEC_MYR")))).Click();
+               // driver.FindElement(By.Id("paymentPayPalEC_MYR")).Click();
                 // Console.WriteLine("Select Paypal");
                 Thread.Sleep(2000);
             }
@@ -182,7 +200,8 @@ namespace TestBuyCar
             try
             {
 
-                driver.FindElement(By.Id("CaptchaCode")).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.Id("CaptchaCode")))).Click();
+                //driver.FindElement(By.Id("CaptchaCode")).Click();
                 //driver.FindElement(By.XPath("//*[@id=\"CaptchaCode\"]")).Click();
 
                 //Console.WriteLine("Captcha found");
@@ -191,7 +210,7 @@ namespace TestBuyCar
             catch (NoSuchElementException)
             {
                 Console.WriteLine("Captcha not found");
-                driver.Close();
+               // driver.Close();
 
             }
 
@@ -224,7 +243,7 @@ namespace TestBuyCar
             catch (NoSuchElementException)
             {
                 Console.WriteLine("Pay now proceed not found");
-                driver.Close();
+                //driver.Close();
 
             }
 
@@ -239,7 +258,7 @@ namespace TestBuyCar
                 new WebDriverWait(driver, TimeSpan.FromSeconds(60)).Until(ExpectedConditions.ElementExists(By.LinkText("Log In"))).Click();
                 //Thread.Sleep(15000);
                 //driver.FindElement(By.LinkText("Log In")).Click();
-                Thread.Sleep(10000);
+                Thread.Sleep(6000);
                 //Console.WriteLine("Login clicked");
                 //Thread.Sleep(8000);
 
@@ -286,6 +305,7 @@ namespace TestBuyCar
         {
             try
             {
+                Thread.Sleep(8000);
                 new WebDriverWait(driver, TimeSpan.FromSeconds(30)).Until(ExpectedConditions.ElementExists(By.XPath("//div[@id='button']/button"))).Click();
               
                 new WebDriverWait(driver, TimeSpan.FromSeconds(20)).Until(ExpectedConditions.ElementExists(By.Id("confirmButtonTop"))).Click();
