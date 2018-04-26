@@ -23,7 +23,7 @@ namespace BusOrderSummary
             {
                 //Console.WriteLine("Enter URL : ");
                 string url =
-                    "https://test.easybook.com/en-my/payment/paymentresult?guid=BUS11ca856bb478406e8&source=PaypalEC_MYR&status=completed";
+                    "https://www.easybook.com/en-my/payment/paymentresult?guid=BUS2a9ccf15c2fa4bafb&source=PaypalEC_MYR&status=completed";
                 string url1 =
                     "https://test.easybook.com/en-sg/payment/paymentresult?guid=BUS36573c11734e4113a&source=PaypalEC_SGD&status=completed";
                 string url2 =
@@ -181,7 +181,7 @@ namespace BusOrderSummary
                 //*[@id="print-content"]/table/tbody/tr/td/table[3]/tbody/tr[2]/td/table[1]/tbody/tr[2]/td[2]
                 var DepartPlace = driver.FindElement(By.XPath("//div[@id='print-content']/table/tbody/tr/td/table[3]/tbody/tr[2]/td/table[1]/tbody/tr[2]/td[2]"));
                 Console.WriteLine("Depart Place : " + DepartPlace.Text.ToString().Trim());
-                //Console.WriteLine("Depart Place: " + DepartPlace.Text);
+               // Console.WriteLine("Depart Place: " + DepartPlace.Text);
 
             }
             catch (NoSuchElementException)
@@ -252,7 +252,7 @@ namespace BusOrderSummary
                 //*[@id="print-content"]/table/tbody/tr/td/table[3]/tbody/tr[2]/td/table[1]/tbody/tr[6]/td[2]
                 var Company = driver.FindElement(By.XPath("//div[@id='print-content']/table/tbody/tr/td/table[3]/tbody/tr[2]/td/table[1]/tbody/tr[6]/td[2]"));
                 Console.WriteLine("Company : " + Company.Text.ToString().Trim());
-                //Console.WriteLine("Company: " + Company.Text);
+               // Console.WriteLine("Company: " + Company.Text);
 
             }
             catch (NoSuchElementException)
