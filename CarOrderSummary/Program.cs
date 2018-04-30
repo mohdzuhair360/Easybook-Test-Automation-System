@@ -23,7 +23,7 @@ namespace CarOrderSummary
             {
                 
                 //Console.WriteLine("Enter URL : ");
-                string url = "https://www.easybook.com/en-sg/payment/paymentresult?guid=CR1f27f12d5cfb4b51af&source=PaypalEC_SGD&status=completed";
+                string url = "https://www.easybook.com/en-my/payment/paymentresult?guid=CR0797efc50f7245c187&source=PaypalEC_SGD&status=completed";
                 //url = Console.ReadLine();
                 //driver.Navigate().GoToUrl(url);
                 driver.Navigate().GoToUrl(url);

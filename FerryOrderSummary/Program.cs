@@ -21,7 +21,7 @@ namespace FerryOrderSummary
         {
             try
             {
-                string url = "https://test.easybook.com/en-sg/payment/paymentresult?guid=FR2aee62c765084f24b0&source=PaypalEC_SGD&status=completed";
+                string url = "https://www.easybook.com/en-my/payment/paymentresult?guid=FRea1a7c8faf354b3aa6&source=PaypalEC_SGD&status=completed";
                 driver.Navigate().GoToUrl(url);
                 driver.Manage().Window.Maximize();
                 //Console.WriteLine("Chrome open");

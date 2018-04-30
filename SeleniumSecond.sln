@@ -53,6 +53,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualDateSandbox", "Manual
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server_TestBuy_OS_Excel-Sandbox", "Server_TestBuy_OS_Excel-Sandbox\Server_TestBuy_OS_Excel-Sandbox.csproj", "{1E402C50-CD72-49E1-B7AB-CAFA1DB6576E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPSERVERLaunch", "IPSERVERLaunch\IPSERVERLaunch.csproj", "{C2F0D79C-6B7D-48B8-B689-4AFD30A572C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -159,6 +161,10 @@ Global
 		{1E402C50-CD72-49E1-B7AB-CAFA1DB6576E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E402C50-CD72-49E1-B7AB-CAFA1DB6576E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E402C50-CD72-49E1-B7AB-CAFA1DB6576E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2F0D79C-6B7D-48B8-B689-4AFD30A572C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F0D79C-6B7D-48B8-B689-4AFD30A572C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F0D79C-6B7D-48B8-B689-4AFD30A572C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F0D79C-6B7D-48B8-B689-4AFD30A572C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

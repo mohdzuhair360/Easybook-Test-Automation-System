@@ -130,7 +130,7 @@ namespace TestBuyFerryLiveSGD
 
                 driver.FindElement(By.Id("dpDepartureDate_Ferry")).Click();
                 driver.FindElement(By.Id("dpDepartureDate_Ferry")).Clear();
-                driver.FindElement(By.Id("dpDepartureDate_Ferry")).SendKeys("2020-03-01");
+                driver.FindElement(By.Id("dpDepartureDate_Ferry")).SendKeys("2020-03-02");
 
                 /*
                 driver.FindElement(By.Id("dpDepartureDate_Ferry")).Click();
