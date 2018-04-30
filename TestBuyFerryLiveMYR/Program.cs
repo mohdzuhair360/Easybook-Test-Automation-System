@@ -110,7 +110,7 @@ namespace TestBuyFerryLiveMYR
             {
                 driver.FindElement(By.Id("dpDepartureDate_Ferry")).Click();
                 driver.FindElement(By.Id("dpDepartureDate_Ferry")).Clear();
-                driver.FindElement(By.Id("dpDepartureDate_Ferry")).SendKeys("2020-03-03");
+                driver.FindElement(By.Id("dpDepartureDate_Ferry")).SendKeys("2020-03-01");
                 /*
 
                 driver.FindElement(By.Id("dpDepartureDate_Ferry")).Click();
@@ -154,7 +154,9 @@ namespace TestBuyFerryLiveMYR
         {
             try
             {
-                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.LinkText("Select")))).Click();
+                //*[@id="MY-int-382334-6fbbaf97-864f-49a1-b6ef-abdd2081dc3b"]/div[1]/div[5]/div/a
+                //new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.LinkText("Select")))).Click();
+                new WebDriverWait(driver, TimeSpan.FromSeconds(10)).Until(ExpectedConditions.ElementExists((By.XPath("//*[@id=\"MY-int-382334-6fbbaf97-864f-49a1-b6ef-abdd2081dc3b\"]/div[1]/div[5]/div/a")))).Click();
                 //Thread.Sleep(3000);
                 //driver.FindElement(By.LinkText("Select Seats")).Click();
                 //Console.WriteLine("Select trip");

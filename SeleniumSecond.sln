@@ -51,8 +51,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBuyCarTestMYRWithOS", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManualDateSandbox", "ManualDateSandbox\ManualDateSandbox.csproj", "{9935A7D8-DEC0-466A-9BD3-2567818E1663}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vidly", "Vidly\Vidly.csproj", "{26ECCCBB-37B5-4D65-9741-93B9621EFA64}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server_TestBuy_OS_Excel-Sandbox", "Server_TestBuy_OS_Excel-Sandbox\Server_TestBuy_OS_Excel-Sandbox.csproj", "{1E402C50-CD72-49E1-B7AB-CAFA1DB6576E}"
 EndProject
 Global
@@ -157,10 +155,6 @@ Global
 		{9935A7D8-DEC0-466A-9BD3-2567818E1663}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9935A7D8-DEC0-466A-9BD3-2567818E1663}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9935A7D8-DEC0-466A-9BD3-2567818E1663}.Release|Any CPU.Build.0 = Release|Any CPU
-		{26ECCCBB-37B5-4D65-9741-93B9621EFA64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{26ECCCBB-37B5-4D65-9741-93B9621EFA64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{26ECCCBB-37B5-4D65-9741-93B9621EFA64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{26ECCCBB-37B5-4D65-9741-93B9621EFA64}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1E402C50-CD72-49E1-B7AB-CAFA1DB6576E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1E402C50-CD72-49E1-B7AB-CAFA1DB6576E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E402C50-CD72-49E1-B7AB-CAFA1DB6576E}.Release|Any CPU.ActiveCfg = Release|Any CPU
